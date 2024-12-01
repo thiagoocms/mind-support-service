@@ -8,7 +8,9 @@ import com.nassau.mind_support_service.repository.UserGameRepository;
 import com.nassau.mind_support_service.service.UserGameService;
 import com.nassau.mind_support_service.validation.UserGameValidation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserGameServiceImpl implements UserGameService {
 
     private final UserGameRepository userGameRepository;
