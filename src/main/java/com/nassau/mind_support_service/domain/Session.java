@@ -22,6 +22,13 @@ public class Session {
     @OneToMany(mappedBy = "session", fetch = FetchType.LAZY)
     private Set<Vote> votes;
 
+    public Session() {
+    }
+
+    public Session(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
@@ -44,5 +51,13 @@ public class Session {
 
     public void setClazz(Class clazz) {
         this.clazz = clazz;
+    }
+
+    public Set<Vote> getVotes() {
+        return votes;
+    }
+
+    public void setVotes(Set<Vote> votes) {
+        this.votes = votes;
     }
 }

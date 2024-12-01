@@ -20,6 +20,14 @@ public class Response {
     @Column(name = "response", nullable = false)
     private Integer response;
 
+    public Response() {
+    }
+
+    public Response(Integer quest, Integer response) {
+        this.quest = quest;
+        this.response = response;
+    }
+
     public Long getId() {
         return id;
     }

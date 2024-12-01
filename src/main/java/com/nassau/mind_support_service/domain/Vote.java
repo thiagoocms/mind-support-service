@@ -3,6 +3,7 @@ package com.nassau.mind_support_service.domain;
 import com.nassau.mind_support_service.enumerated.VoteTypeEnum;
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -26,7 +27,7 @@ public class Vote {
     private VoteTypeEnum type;
 
     @OneToMany(mappedBy = "vote", fetch = FetchType.EAGER)
-    private Set<Response> responses;
+    private Set<Response> responses = new HashSet<>();
 
     public Long getId() {
         return id;
