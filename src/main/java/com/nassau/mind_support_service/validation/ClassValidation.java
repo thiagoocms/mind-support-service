@@ -61,7 +61,7 @@ public class ClassValidation {
         User foreKey = this.userRepository.findFirstById(entity.getUser().getId());
 
         if (foreKey == null) {
-            throw new ResourceNotFoundException("Classe nao encontrada");
+            throw new ResourceNotFoundException("Usuario nao encontrada");
         }
 
         entity.setUser(foreKey);

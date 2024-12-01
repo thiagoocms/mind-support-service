@@ -19,4 +19,36 @@ public class Response {
 
     @Column(name = "response", nullable = false)
     private Integer response;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Vote getVote() {
+        return vote;
+    }
+
+    public void setVote(Vote vote) {
+        this.vote = vote;
+    }
+
+    public Integer getQuest() {
+        return quest;
+    }
+
+    public void setQuest(Integer quest) {
+        this.quest = quest;
+    }
+
+    public Integer getResponse() {
+        return response;
+    }
+
+    public void setResponse(Integer response) {
+        this.response = response;
+    }
 }
